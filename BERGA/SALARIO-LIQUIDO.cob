@@ -12,7 +12,7 @@ Environment DIVISION.
        77  VAL_HORA            PIC 9(09)V99   VALUE ZEROS.
        77  SAL_BRUTO           PIC 9(09)V99   VALUE ZEROS.
        77  IRRF                PIC 9(09)V99   VALUE ZEROS.
-       77  SAL_LIQUIDO         PIC 9(09)V99      VALUE ZEROS.
+       77  SAL_LIQUIDO         PIC 9(09)V99   VALUE ZEROS.
        77  MASCARA             PIC ZZ.ZZZ.ZZ9,99.
        
        PROCEDURE DIVISION.
@@ -43,9 +43,9 @@ Environment DIVISION.
                        ELSE
                            COMPUTE IRRF = SAL_BRUTO * 0,275 - 884,96
                
-           COMPUTE SAL_LIQUIDO = SAL_BRUTO - IRRF
-           MOVE SAL_LIQUIDO TO MASCARA
-           DISPLAY "SALARIO LIQUIDO: " MASCARA
+           COMPUTE SAL_LIQUIDO = SAL_BRUTO - IRRF.
+           MOVE SAL_LIQUIDO TO MASCARA.
+           DISPLAY "SALARIO LIQUIDO: " MASCARA.
            
            STOP RUN.
            
